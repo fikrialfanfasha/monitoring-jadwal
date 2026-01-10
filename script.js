@@ -17067,6 +17067,43 @@ const itemsPerPage = 50;
 let periods = {};
 let days = [];
 
+// Fungsi untuk mendapatkan class CSS berdasarkan nama kelas - FIXED DETECTION
+function getClassColor(className) {
+    let level = '';
+    let major = '';
+
+    // Deteksi tingkat dengan spasi dan tanpa spasi
+    if (className.match(/^X\s/)) {
+        level = 'grade-10';
+    } else if (className.match(/^XI\s/)) {
+        level = 'grade-11';
+    } else if (className.match(/^XII\s/)) {
+        level = 'grade-12';
+    }
+
+    // Deteksi jurusan dengan berbagai variasi
+    const classUpper = className.toUpperCase();
+
+    // TAV atau TE (Teknik Audio Video / Elektronika)
+    if (classUpper.includes('TAV') || classUpper.match(/\sTE\s/) || classUpper.match(/\sTE\d/)) {
+        major = 'major-tav';
+    }
+    // PPLG atau RPL (Pengembangan Perangkat Lunak)
+    else if (classUpper.includes('PPLG') || classUpper.includes('RPL')) {
+        major = 'major-pplg';
+    }
+    // TJKT atau TKJ (Teknik Jaringan Komputer)
+    else if (classUpper.includes('TJKT') || classUpper.includes('TKJ')) {
+        major = 'major-tjkt';
+    }
+    // ATPH atau AT (Agribisnis Tanaman)
+    else if (classUpper.includes('ATPH') || classUpper.match(/\sAT\s/) || classUpper.match(/\sAT\d/)) {
+        major = 'major-atph';
+    }
+
+    return `${level} ${major}`.trim();
+}
+
 // Load data dari variable embedded
 function loadData() {
     try {
@@ -17079,6 +17116,13 @@ function loadData() {
         applyFilters();
         updateCurrentTime();
         setInterval(updateCurrentTime, 1000);
+
+        // Debug: Log beberapa class colors
+        console.log('Color Coding Test:');
+        const testClasses = ['X TE 1', 'XI PPLG 2', 'XII TKJ 3', 'X AT 1', 'XI TAV 1', 'XII RPL 1', 'X TJKT 1', 'XI ATPH 1'];
+        testClasses.forEach(cls => {
+            console.log(`${cls}: ${getClassColor(cls)}`);
+        });
     } catch (error) {
         console.error('Error loading data:', error);
         document.getElementById('scheduleBody').innerHTML = 
@@ -17101,7 +17145,6 @@ function updateCurrentTime() {
     document.getElementById('currentTime').textContent = 
         now.toLocaleDateString('id-ID', options);
 
-    // Update current period
     updateCurrentPeriod(now);
 }
 
@@ -17127,7 +17170,6 @@ function updateCurrentPeriod(now) {
 
 // Populate filter dropdowns
 function populateFilters() {
-    // Populate periods
     const periodSelect = document.getElementById('periodSelect');
     Object.keys(periods).sort((a, b) => parseInt(a) - parseInt(b)).forEach(periodNum => {
         const option = document.createElement('option');
@@ -17136,7 +17178,6 @@ function populateFilters() {
         periodSelect.appendChild(option);
     });
 
-    // Populate classes
     const classes = [...new Set(scheduleData.map(s => s.class))].sort();
     const classSelect = document.getElementById('classSelect');
     classes.forEach(className => {
@@ -17146,7 +17187,6 @@ function populateFilters() {
         classSelect.appendChild(option);
     });
 
-    // Populate teachers
     const teachers = [...new Set(scheduleData.map(s => s.teacher))].sort();
     const teacherSelect = document.getElementById('teacherSelect');
     teachers.forEach(teacherName => {
@@ -17200,17 +17240,20 @@ function renderTable() {
         return;
     }
 
-    tbody.innerHTML = pageData.map((item, index) => `
-        <tr>
+    tbody.innerHTML = pageData.map((item, index) => {
+        const colorClass = getClassColor(item.class);
+        return `
+        <tr class="${colorClass}">
             <td>${start + index + 1}</td>
             <td>${item.day}</td>
             <td>Jam ${item.period}</td>
             <td>${item.starttime} - ${item.endtime}</td>
-            <td>${item.class}</td>
+            <td class="class-cell">${item.class}</td>
             <td>${item.subject}</td>
             <td>${item.teacher}</td>
         </tr>
-    `).join('');
+    `;
+    }).join('');
 
     updatePagination();
 }
@@ -17233,7 +17276,6 @@ function renderGrid() {
         return;
     }
 
-    // Group by day and period
     const grouped = {};
 
     filteredData.forEach(item => {
@@ -17242,7 +17284,6 @@ function renderGrid() {
         grouped[item.day][item.period].push(item);
     });
 
-    // Render
     gridContainer.innerHTML = days.filter(day => grouped[day]).map(day => `
         <div class="day-section">
             <div class="day-header"><i class="far fa-calendar-alt"></i> ${day}</div>
@@ -17254,13 +17295,16 @@ function renderGrid() {
                             <span class="period-number">Jam ${period}</span>
                         </div>
                         <div class="class-grid">
-                            ${grouped[day][period].map(item => `
-                                <div class="class-item">
+                            ${grouped[day][period].map(item => {
+                                const colorClass = getClassColor(item.class);
+                                return `
+                                <div class="class-item ${colorClass}">
                                     <div class="class-name"><i class="fas fa-door-open"></i> ${item.class}</div>
                                     <div class="subject-name"><i class="fas fa-book"></i> ${item.subject}</div>
                                     <div class="teacher-name"><i class="fas fa-user"></i> ${item.teacher}</div>
                                 </div>
-                            `).join('')}
+                            `;
+                            }).join('')}
                         </div>
                     </div>
                 `).join('')}
