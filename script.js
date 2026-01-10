@@ -1,4 +1,4 @@
-// Data jadwal embedded langsung
+// Data jadwal embedded
 const SCHEDULE_DATA = {
   "periods": {
     "1": {
@@ -17066,9 +17066,11 @@ let currentPage = 1;
 const itemsPerPage = 50;
 let periods = {};
 let days = [];
-let autoFollowEnabled = true; // Auto-follow current time
+let autoFollowEnabled = true;
+let lastCheckedDay = '';
+let lastCheckedPeriod = null;
 
-// Map day names
+// Day mapping
 const dayMap = {
     'Sunday': 'MINGGU',
     'Monday': 'SENIN',
@@ -17079,7 +17081,7 @@ const dayMap = {
     'Saturday': 'SABTU'
 };
 
-// Fungsi untuk mendapatkan class CSS berdasarkan nama kelas
+// Color coding function
 function getClassColor(className) {
     let level = '';
     let major = '';
@@ -17140,24 +17142,51 @@ function autoFollowCurrentTime() {
 
     const { day, period } = getCurrentDayAndPeriod();
 
-    // Set filters only if values exist and on weekdays
+    // Set filters hanya jika ada perubahan
     if (day && days.includes(day)) {
-        document.getElementById('daySelect').value = day;
+        if (document.getElementById('daySelect').value !== day) {
+            document.getElementById('daySelect').value = day;
+        }
     }
 
     if (period) {
-        document.getElementById('periodSelect').value = period.toString();
+        const periodStr = period.toString();
+        if (document.getElementById('periodSelect').value !== periodStr) {
+            document.getElementById('periodSelect').value = periodStr;
+        }
     }
 
+    // Apply filters dan render
     applyFilters();
 
-    // Scroll to highlighted row in table view
     setTimeout(() => {
         scrollToCurrentSchedule();
     }, 100);
 }
 
-// Scroll to current schedule row/card
+// Check if day or period changed - REAL-TIME
+function checkAndUpdateIfChanged() {
+    if (!autoFollowEnabled) return;
+
+    const { day, period } = getCurrentDayAndPeriod();
+
+    // Jika hari atau jam berubah, update otomatis
+    if (day !== lastCheckedDay || period !== lastCheckedPeriod) {
+        console.log('🔄 Perubahan terdeteksi:', {
+            oldDay: lastCheckedDay,
+            newDay: day,
+            oldPeriod: lastCheckedPeriod,
+            newPeriod: period
+        });
+
+        lastCheckedDay = day;
+        lastCheckedPeriod = period;
+
+        autoFollowCurrentTime();
+    }
+}
+
+// Scroll to current schedule
 function scrollToCurrentSchedule() {
     const currentRow = document.querySelector('tbody tr.current-schedule');
     const currentCard = document.querySelector('.class-item.current-schedule');
@@ -17175,28 +17204,28 @@ function isCurrentSchedule(scheduleDay, schedulePeriod) {
     return scheduleDay === day && schedulePeriod === period;
 }
 
-// Load data dari variable embedded
+// Load data
 function loadData() {
     try {
         scheduleData = SCHEDULE_DATA.schedule;
         periods = SCHEDULE_DATA.periods;
         days = SCHEDULE_DATA.days;
 
+        // Initialize
+        const { day, period } = getCurrentDayAndPeriod();
+        lastCheckedDay = day;
+        lastCheckedPeriod = period;
+
         populateFilters();
         updateStats();
-
-        // Auto-follow current time on load
         autoFollowCurrentTime();
-
         updateCurrentTime();
+
+        // Update setiap detik (untuk waktu di header)
         setInterval(updateCurrentTime, 1000);
 
-        // Refresh auto-follow every minute
-        setInterval(() => {
-            if (autoFollowEnabled) {
-                autoFollowCurrentTime();
-            }
-        }, 60000); // Check every minute
+        // Check perubahan hari/jam setiap 10 detik
+        setInterval(checkAndUpdateIfChanged, 10000);
 
     } catch (error) {
         console.error('Error loading data:', error);
@@ -17205,7 +17234,7 @@ function loadData() {
     }
 }
 
-// Update current time
+// Update current time display
 function updateCurrentTime() {
     const now = new Date();
     const options = { 
@@ -17220,11 +17249,11 @@ function updateCurrentTime() {
     document.getElementById('currentTime').textContent = 
         now.toLocaleDateString('id-ID', options);
 
-    updateCurrentPeriod(now);
+    updateCurrentPeriodBadge(now);
 }
 
-// Update current period indicator
-function updateCurrentPeriod(now) {
+// Update current period badge
+function updateCurrentPeriodBadge(now) {
     const currentTime = now.getHours() * 60 + now.getMinutes();
     let currentPeriod = '-';
 
@@ -17240,10 +17269,13 @@ function updateCurrentPeriod(now) {
         }
     }
 
-    document.getElementById('currentPeriod').textContent = currentPeriod;
+    const badge = document.getElementById('currentPeriod');
+    if (badge) {
+        badge.textContent = currentPeriod;
+    }
 }
 
-// Populate filter dropdowns
+// Populate filters
 function populateFilters() {
     const periodSelect = document.getElementById('periodSelect');
     Object.keys(periods).sort((a, b) => parseInt(a) - parseInt(b)).forEach(periodNum => {
@@ -17303,7 +17335,7 @@ function updateStats() {
     document.getElementById('activeClasses').textContent = uniqueClasses.size;
 }
 
-// Render table view with current schedule highlight
+// Render table view
 function renderTable() {
     const tbody = document.getElementById('scheduleBody');
     const start = (currentPage - 1) * itemsPerPage;
@@ -17345,7 +17377,7 @@ function updatePagination() {
     document.getElementById('nextPage').disabled = currentPage === totalPages || totalPages === 0;
 }
 
-// Render grid view with current schedule highlight
+// Render grid view
 function renderGrid() {
     const gridContainer = document.getElementById('gridContainer');
 
@@ -17396,7 +17428,7 @@ function renderGrid() {
 
 // Event listeners
 document.getElementById('daySelect').addEventListener('change', () => {
-    autoFollowEnabled = false; // Disable auto-follow when user manually changes filter
+    autoFollowEnabled = false;
     applyFilters();
 });
 
@@ -17413,7 +17445,9 @@ document.getElementById('resetBtn').addEventListener('click', () => {
     document.getElementById('periodSelect').value = '';
     document.getElementById('classSelect').value = '';
     document.getElementById('teacherSelect').value = '';
-    autoFollowEnabled = true; // Re-enable auto-follow on reset
+    autoFollowEnabled = true;
+    lastCheckedDay = '';
+    lastCheckedPeriod = null;
     autoFollowCurrentTime();
 });
 
@@ -17447,7 +17481,6 @@ document.querySelectorAll('.toggle-btn').forEach(btn => {
             document.getElementById('gridView').classList.add('active');
         }
 
-        // Scroll to current after view change
         setTimeout(() => {
             scrollToCurrentSchedule();
         }, 100);
