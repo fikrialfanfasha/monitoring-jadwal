@@ -21,7 +21,7 @@ body {
     backdrop-filter: blur(20px);
 }
 
-/* HEADER - SUPER COMPACT */
+/* HEADER - COMPACT */
 header {
     background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
     color: white;
@@ -161,7 +161,7 @@ select:focus {
     box-shadow: 0 6px 16px rgba(239, 68, 68, 0.3);
 }
 
-/* STATS - SUPER COMPACT */
+/* STATS - COMPACT */
 .stats-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -325,7 +325,6 @@ tbody tr {
 
 tbody tr:hover {
     background: linear-gradient(to right, #f8fafc 0%, #ffffff 100%);
-    transform: scale(1.003);
 }
 
 tbody tr:last-child td:first-child {
@@ -440,9 +439,7 @@ tbody tr.major-atph {
 tbody tr.current-schedule {
     background: linear-gradient(to right, #fef3c7 0%, #fde68a 100%) !important;
     border: 4px solid #f59e0b !important;
-    box-shadow: 0 0 25px rgba(245, 158, 11, 0.5) !important;
-    animation: pulse-glow 2s ease-in-out infinite;
-    transform: scale(1.01);
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.4) !important;
 }
 
 tbody tr.current-schedule td {
@@ -469,21 +466,6 @@ tbody tr.current-schedule td:nth-child(3)::after {
     border-radius: 14px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    animation: blink 1.5s ease-in-out infinite;
-}
-
-@keyframes pulse-glow {
-    0%, 100% {
-        box-shadow: 0 0 25px rgba(245, 158, 11, 0.5);
-    }
-    50% {
-        box-shadow: 0 0 40px rgba(245, 158, 11, 0.8);
-    }
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
 }
 
 .pagination {
@@ -534,7 +516,7 @@ tbody tr.current-schedule td:nth-child(3)::after {
     border: 2px solid #e2e8f0;
 }
 
-/* GRID VIEW - MAKSIMALKAN */
+/* GRID VIEW */
 .grid-container {
     display: grid;
     gap: 24px;
@@ -702,9 +684,7 @@ tbody tr.current-schedule td:nth-child(3)::after {
 .class-item.current-schedule {
     background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%) !important;
     border: 4px solid #f59e0b !important;
-    box-shadow: 0 0 30px rgba(245, 158, 11, 0.6) !important;
-    animation: pulse-glow 2s ease-in-out infinite;
-    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(245, 158, 11, 0.5) !important;
 }
 
 .class-item.current-schedule .class-name {
@@ -723,7 +703,6 @@ tbody tr.current-schedule td:nth-child(3)::after {
     border-radius: 14px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    animation: blink 1.5s ease-in-out infinite;
 }
 
 .class-item.current-schedule .subject-name {
@@ -778,27 +757,36 @@ footer i {
     margin-right: 6px;
 }
 
-/* RESPONSIVE MOBILE */
+/* RESPONSIVE MOBILE - FIX ISSUES */
 @media (max-width: 768px) {
     body {
         padding: 8px;
     }
 
-    header h1 {
-        font-size: 1.2em;
+    .container {
+        border-radius: 12px;
     }
 
     header {
         padding: 10px 16px;
     }
 
+    header h1 {
+        font-size: 1.1em;
+    }
+
     .subtitle {
-        font-size: 0.75em;
+        font-size: 0.7em;
     }
 
     .current-time {
-        font-size: 0.7em;
+        font-size: 0.65em;
         padding: 4px 10px;
+    }
+
+    /* Remove problematic animations on mobile */
+    header::before {
+        animation: none;
     }
 
     .controls, .stats-container, .view-content {
@@ -816,16 +804,17 @@ footer i {
 
     .control-group label {
         font-size: 0.7em;
+        margin-bottom: 4px;
     }
 
     select {
-        padding: 8px 10px;
-        font-size: 0.8em;
+        padding: 10px 12px;
+        font-size: 0.85em;
     }
 
     .btn-reset {
         width: 100%;
-        padding: 8px;
+        padding: 10px;
         font-size: 0.8em;
         min-width: unset;
     }
@@ -847,7 +836,7 @@ footer i {
     }
 
     .stat-value {
-        font-size: 1.3em;
+        font-size: 1.4em;
     }
 
     .stat-label {
@@ -856,40 +845,107 @@ footer i {
 
     .view-toggle {
         padding: 10px 12px;
-        flex-direction: row;
         gap: 8px;
     }
 
     .toggle-btn {
-        padding: 10px 8px;
+        padding: 10px;
         font-size: 0.75em;
         gap: 6px;
     }
 
     .toggle-btn i {
-        font-size: 1.1em;
-    }
-
-    .day-section {
-        padding: 14px;
-    }
-
-    .day-header {
-        font-size: 1.4em;
-        margin-bottom: 14px;
-    }
-
-    .period-card {
-        padding: 14px;
-    }
-
-    .period-time {
         font-size: 1em;
     }
 
+    /* Table optimization for mobile */
+    .table-wrapper {
+        border-radius: 12px;
+        border-width: 1px;
+    }
+
+    table {
+        font-size: 0.75em;
+    }
+
+    th {
+        padding: 10px 8px;
+        font-size: 0.75em;
+    }
+
+    td {
+        padding: 10px 8px;
+        font-size: 0.9em;
+    }
+
+    td:nth-child(1) {
+        font-size: 0.95em;
+    }
+
+    td:nth-child(2) {
+        font-size: 0.95em;
+    }
+
+    td:nth-child(3) {
+        font-size: 0.95em;
+    }
+
+    tbody tr.grade-10 td.class-cell,
+    tbody tr.grade-11 td.class-cell,
+    tbody tr.grade-12 td.class-cell {
+        font-size: 1em;
+    }
+
+    tbody tr.current-schedule td.class-cell {
+        font-size: 1.05em !important;
+    }
+
+    /* Remove transform on mobile to prevent flickering */
+    tbody tr:hover {
+        transform: none;
+    }
+
+    tbody tr.current-schedule {
+        border-width: 3px !important;
+        box-shadow: 0 0 15px rgba(245, 158, 11, 0.4) !important;
+    }
+
+    tbody tr.current-schedule td:nth-child(3)::after {
+        font-size: 0.6em;
+        padding: 3px 8px;
+        margin-left: 6px;
+    }
+
+    /* Grid view mobile */
+    .day-section {
+        padding: 14px;
+        border-width: 1px;
+    }
+
+    .day-header {
+        font-size: 1.3em;
+        margin-bottom: 14px;
+        border-bottom-width: 2px;
+    }
+
+    .period-card {
+        padding: 12px;
+        border-width: 1px;
+        border-left-width: 4px;
+    }
+
+    /* Remove transform on mobile */
+    .period-card:hover {
+        transform: none;
+    }
+
+    .period-time {
+        font-size: 0.95em;
+    }
+
     .period-number {
-        font-size: 0.85em;
-        padding: 6px 14px;
+        font-size: 0.75em;
+        padding: 6px 12px;
     }
 
     .class-grid {
@@ -898,61 +954,34 @@ footer i {
     }
 
     .class-item {
-        padding: 14px;
+        padding: 12px;
+        border-width: 1px;
+    }
+
+    /* Remove transform on mobile to prevent flickering */
+    .class-item:hover {
+        transform: none;
+    }
+
+    .class-item.current-schedule {
+        border-width: 3px !important;
+        box-shadow: 0 0 20px rgba(245, 158, 11, 0.5) !important;
     }
 
     .class-name {
-        font-size: 1.1em;
+        font-size: 1.05em;
+    }
+
+    .class-item.current-schedule .class-name {
+        font-size: 1.15em !important;
     }
 
     .subject-name {
-        font-size: 0.95em;
-    }
-
-    .teacher-name {
-        font-size: 0.85em;
-    }
-
-    table {
-        font-size: 0.8em;
-    }
-
-    th, td {
-        padding: 12px 10px;
-    }
-
-    .pagination {
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 20px;
-    }
-
-    .btn-page {
-        padding: 10px 16px;
-        font-size: 0.8em;
-        border-radius: 8px;
-        letter-spacing: 0.3px;
-        flex: 0 0 auto;
-        min-width: 90px;
-    }
-
-    .btn-page i {
-        margin: 0 4px;
         font-size: 0.9em;
     }
 
-    #pageInfo {
+    .teacher-name {
         font-size: 0.8em;
-        padding: 8px 14px;
-        flex: 0 0 100%;
-        text-align: center;
-        order: -1;
-    }
-
-    tbody tr.current-schedule td:nth-child(3)::after {
-        font-size: 0.65em;
-        padding: 3px 8px;
-        margin-left: 6px;
     }
 
     .class-item.current-schedule .class-name::after {
@@ -960,32 +989,71 @@ footer i {
         padding: 3px 8px;
         margin-left: 6px;
     }
-}
 
-@media (max-width: 400px) {
+    /* Pagination mobile */
+    .pagination {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
     .btn-page {
-        padding: 8px 12px;
+        padding: 10px 16px;
         font-size: 0.75em;
-        min-width: 80px;
+        min-width: 85px;
+    }
+
+    .btn-page i {
+        margin: 0 4px;
+    }
+
+    /* Remove hover transform on mobile */
+    .btn-page:hover:not(:disabled) {
+        transform: none;
     }
 
     #pageInfo {
         font-size: 0.75em;
+        padding: 8px 12px;
+        flex: 0 0 100%;
+        text-align: center;
+        order: -1;
+    }
+
+    footer {
+        font-size: 0.75em;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    header h1 {
+        font-size: 1em;
+    }
+
+    .btn-page {
+        padding: 8px 12px;
+        font-size: 0.7em;
+        min-width: 75px;
+    }
+
+    #pageInfo {
+        font-size: 0.7em;
         padding: 6px 10px;
     }
 }
 
 .loading {
     text-align: center;
-    padding: 80px;
-    font-size: 1.2em;
+    padding: 60px 20px;
+    font-size: 1em;
     color: #64748b;
 }
 
 .no-data {
     text-align: center;
-    padding: 80px;
+    padding: 60px 20px;
     color: #64748b;
-    font-size: 1.1em;
+    font-size: 0.95em;
     font-weight: 600;
 }
