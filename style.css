@@ -257,7 +257,6 @@ select:focus {
     box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
 }
 
-/* MAIN CONTENT - FUTURISTIC MINIMALIST */
 .view-content {
     display: none;
     padding: 40px;
@@ -365,7 +364,7 @@ td:nth-child(7) {
     font-size: 0.9em;
 }
 
-/* COLOR CODING - TINGKAT (Modern Pastels) */
+/* COLOR CODING - TINGKAT */
 tbody tr.grade-10 {
     background: linear-gradient(to right, #e0f2fe 0%, #f0f9ff 100%);
 }
@@ -408,7 +407,7 @@ tbody tr.grade-12 td.class-cell {
     font-size: 1.05em;
 }
 
-/* COLOR CODING - JURUSAN (Vibrant Accents) */
+/* COLOR CODING - JURUSAN */
 tbody tr.major-tav {
     border-left: 5px solid #0ea5e9;
 }
@@ -423,6 +422,55 @@ tbody tr.major-tjkt {
 
 tbody tr.major-atph {
     border-left: 5px solid #10b981;
+}
+
+/* HIGHLIGHT JADWAL SEDANG BERLANGSUNG */
+tbody tr.current-schedule {
+    background: linear-gradient(to right, #fef3c7 0%, #fde68a 100%) !important;
+    border: 3px solid #f59e0b !important;
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.4) !important;
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+tbody tr.current-schedule td {
+    font-weight: 700 !important;
+}
+
+tbody tr.current-schedule td:first-child {
+    color: #d97706 !important;
+}
+
+tbody tr.current-schedule td.class-cell {
+    color: #ea580c !important;
+    font-size: 1.1em !important;
+}
+
+tbody tr.current-schedule td:nth-child(3)::after {
+    content: '• BERLANGSUNG';
+    margin-left: 10px;
+    padding: 4px 10px;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+    font-size: 0.7em;
+    font-weight: 800;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    animation: blink 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(245, 158, 11, 0.7);
+    }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
 }
 
 .pagination {
@@ -473,7 +521,7 @@ tbody tr.major-atph {
     border: 2px solid #e2e8f0;
 }
 
-/* GRID VIEW - FUTURISTIC */
+/* GRID VIEW */
 .grid-container {
     display: grid;
     gap: 28px;
@@ -637,6 +685,39 @@ tbody tr.major-atph {
     color: #059669 !important;
 }
 
+/* GRID - HIGHLIGHT CURRENT SCHEDULE */
+.class-item.current-schedule {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%) !important;
+    border: 3px solid #f59e0b !important;
+    box-shadow: 0 0 25px rgba(245, 158, 11, 0.5) !important;
+    animation: pulse-glow 2s ease-in-out infinite;
+    transform: scale(1.02);
+}
+
+.class-item.current-schedule .class-name {
+    color: #ea580c !important;
+    font-size: 1.25em !important;
+}
+
+.class-item.current-schedule .class-name::after {
+    content: '• BERLANGSUNG';
+    margin-left: 10px;
+    padding: 4px 10px;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+    font-size: 0.6em;
+    font-weight: 800;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    animation: blink 1.5s ease-in-out infinite;
+}
+
+.class-item.current-schedule .subject-name {
+    color: #1e293b !important;
+    font-weight: 700 !important;
+}
+
 .class-name {
     font-weight: 800;
     margin-bottom: 10px;
@@ -683,37 +764,203 @@ footer i {
     margin-right: 6px;
 }
 
+/* RESPONSIVE MOBILE */
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
     header h1 {
-        font-size: 1.5em;
+        font-size: 1.3em;
+    }
+
+    header {
+        padding: 16px 20px;
+    }
+
+    .subtitle {
+        font-size: 0.85em;
+    }
+
+    .current-time {
+        font-size: 0.75em;
+        padding: 6px 12px;
     }
 
     .controls, .stats-container, .view-content {
-        padding: 20px;
+        padding: 16px;
     }
 
     .controls {
         flex-direction: column;
+        gap: 10px;
     }
 
     .control-group {
         min-width: 100%;
     }
 
+    .control-group label {
+        font-size: 0.75em;
+    }
+
+    select {
+        padding: 10px 12px;
+        font-size: 0.85em;
+    }
+
+    .btn-reset {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.85em;
+        min-width: unset;
+    }
+
     .stats-container {
         grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 14px 16px;
+        gap: 12px;
+    }
+
+    .stat-icon {
+        font-size: 1.8em;
+        width: 50px;
+        height: 50px;
+    }
+
+    .stat-value {
+        font-size: 1.6em;
+    }
+
+    .stat-label {
+        font-size: 0.75em;
     }
 
     .view-toggle {
-        flex-direction: column;
+        padding: 12px 16px;
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .toggle-btn {
+        padding: 10px 8px;
+        font-size: 0.75em;
+        gap: 6px;
+    }
+
+    .toggle-btn i {
+        font-size: 1.1em;
+    }
+
+    .day-section {
+        padding: 16px;
+    }
+
+    .day-header {
+        font-size: 1.3em;
+        margin-bottom: 16px;
+    }
+
+    .period-card {
+        padding: 14px;
+    }
+
+    .period-time {
+        font-size: 0.95em;
+    }
+
+    .period-number {
+        font-size: 0.8em;
+        padding: 6px 14px;
     }
 
     .class-grid {
         grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .class-item {
+        padding: 14px;
+    }
+
+    .class-name {
+        font-size: 1em;
+    }
+
+    .subject-name {
+        font-size: 0.9em;
+    }
+
+    .teacher-name {
+        font-size: 0.8em;
     }
 
     table {
-        font-size: 0.85em;
+        font-size: 0.75em;
+    }
+
+    th, td {
+        padding: 10px 8px;
+    }
+
+    /* PAGINATION MOBILE - FIX UKURAN */
+    .pagination {
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+    }
+
+    .btn-page {
+        padding: 10px 16px;
+        font-size: 0.8em;
+        border-radius: 8px;
+        letter-spacing: 0.3px;
+        flex: 0 0 auto;
+        min-width: 90px;
+    }
+
+    .btn-page i {
+        margin: 0 4px;
+        font-size: 0.9em;
+    }
+
+    #pageInfo {
+        font-size: 0.8em;
+        padding: 8px 14px;
+        flex: 0 0 100%;
+        text-align: center;
+        order: -1;
+    }
+
+    /* Badge berlangsung di mobile lebih kecil */
+    tbody tr.current-schedule td:nth-child(3)::after {
+        font-size: 0.6em;
+        padding: 3px 8px;
+        margin-left: 6px;
+    }
+
+    .class-item.current-schedule .class-name::after {
+        font-size: 0.55em;
+        padding: 3px 8px;
+        margin-left: 6px;
+    }
+}
+
+/* EXTRA SMALL MOBILE */
+@media (max-width: 400px) {
+    .btn-page {
+        padding: 8px 12px;
+        font-size: 0.75em;
+        min-width: 80px;
+    }
+
+    #pageInfo {
+        font-size: 0.75em;
+        padding: 6px 10px;
     }
 }
 

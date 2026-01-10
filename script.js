@@ -17066,13 +17066,24 @@ let currentPage = 1;
 const itemsPerPage = 50;
 let periods = {};
 let days = [];
+let autoFollowEnabled = true; // Auto-follow current time
 
-// Fungsi untuk mendapatkan class CSS berdasarkan nama kelas - FIXED DETECTION
+// Map day names
+const dayMap = {
+    'Sunday': 'MINGGU',
+    'Monday': 'SENIN',
+    'Tuesday': 'SELASA',
+    'Wednesday': 'RABU',
+    'Thursday': 'KAMIS',
+    'Friday': "JUM'AT",
+    'Saturday': 'SABTU'
+};
+
+// Fungsi untuk mendapatkan class CSS berdasarkan nama kelas
 function getClassColor(className) {
     let level = '';
     let major = '';
 
-    // Deteksi tingkat dengan spasi dan tanpa spasi
     if (className.match(/^X\s/)) {
         level = 'grade-10';
     } else if (className.match(/^XI\s/)) {
@@ -17081,27 +17092,87 @@ function getClassColor(className) {
         level = 'grade-12';
     }
 
-    // Deteksi jurusan dengan berbagai variasi
     const classUpper = className.toUpperCase();
 
-    // TAV atau TE (Teknik Audio Video / Elektronika)
     if (classUpper.includes('TAV') || classUpper.match(/\sTE\s/) || classUpper.match(/\sTE\d/)) {
         major = 'major-tav';
     }
-    // PPLG atau RPL (Pengembangan Perangkat Lunak)
     else if (classUpper.includes('PPLG') || classUpper.includes('RPL')) {
         major = 'major-pplg';
     }
-    // TJKT atau TKJ (Teknik Jaringan Komputer)
     else if (classUpper.includes('TJKT') || classUpper.includes('TKJ')) {
         major = 'major-tjkt';
     }
-    // ATPH atau AT (Agribisnis Tanaman)
     else if (classUpper.includes('ATPH') || classUpper.match(/\sAT\s/) || classUpper.match(/\sAT\d/)) {
         major = 'major-atph';
     }
 
     return `${level} ${major}`.trim();
+}
+
+// Get current day and period
+function getCurrentDayAndPeriod() {
+    const now = new Date();
+    const dayName = now.toLocaleDateString('en-US', { weekday: 'long' });
+    const currentDay = dayMap[dayName] || '';
+    const currentTime = now.getHours() * 60 + now.getMinutes();
+
+    let currentPeriodNum = null;
+
+    for (const [periodNum, periodInfo] of Object.entries(periods)) {
+        const [startH, startM] = periodInfo.starttime.split(':').map(Number);
+        const [endH, endM] = periodInfo.endtime.split(':').map(Number);
+        const startTime = startH * 60 + startM;
+        const endTime = endH * 60 + endM;
+
+        if (currentTime >= startTime && currentTime <= endTime) {
+            currentPeriodNum = parseInt(periodNum);
+            break;
+        }
+    }
+
+    return { day: currentDay, period: currentPeriodNum };
+}
+
+// Auto-apply current day and period filter
+function autoFollowCurrentTime() {
+    if (!autoFollowEnabled) return;
+
+    const { day, period } = getCurrentDayAndPeriod();
+
+    // Set filters only if values exist and on weekdays
+    if (day && days.includes(day)) {
+        document.getElementById('daySelect').value = day;
+    }
+
+    if (period) {
+        document.getElementById('periodSelect').value = period.toString();
+    }
+
+    applyFilters();
+
+    // Scroll to highlighted row in table view
+    setTimeout(() => {
+        scrollToCurrentSchedule();
+    }, 100);
+}
+
+// Scroll to current schedule row/card
+function scrollToCurrentSchedule() {
+    const currentRow = document.querySelector('tbody tr.current-schedule');
+    const currentCard = document.querySelector('.class-item.current-schedule');
+
+    if (currentRow) {
+        currentRow.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else if (currentCard) {
+        currentCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+// Check if schedule is currently active
+function isCurrentSchedule(scheduleDay, schedulePeriod) {
+    const { day, period } = getCurrentDayAndPeriod();
+    return scheduleDay === day && schedulePeriod === period;
 }
 
 // Load data dari variable embedded
@@ -17113,16 +17184,20 @@ function loadData() {
 
         populateFilters();
         updateStats();
-        applyFilters();
+
+        // Auto-follow current time on load
+        autoFollowCurrentTime();
+
         updateCurrentTime();
         setInterval(updateCurrentTime, 1000);
 
-        // Debug: Log beberapa class colors
-        console.log('Color Coding Test:');
-        const testClasses = ['X TE 1', 'XI PPLG 2', 'XII TKJ 3', 'X AT 1', 'XI TAV 1', 'XII RPL 1', 'X TJKT 1', 'XI ATPH 1'];
-        testClasses.forEach(cls => {
-            console.log(`${cls}: ${getClassColor(cls)}`);
-        });
+        // Refresh auto-follow every minute
+        setInterval(() => {
+            if (autoFollowEnabled) {
+                autoFollowCurrentTime();
+            }
+        }, 60000); // Check every minute
+
     } catch (error) {
         console.error('Error loading data:', error);
         document.getElementById('scheduleBody').innerHTML = 
@@ -17228,7 +17303,7 @@ function updateStats() {
     document.getElementById('activeClasses').textContent = uniqueClasses.size;
 }
 
-// Render table view
+// Render table view with current schedule highlight
 function renderTable() {
     const tbody = document.getElementById('scheduleBody');
     const start = (currentPage - 1) * itemsPerPage;
@@ -17242,8 +17317,11 @@ function renderTable() {
 
     tbody.innerHTML = pageData.map((item, index) => {
         const colorClass = getClassColor(item.class);
+        const isCurrent = isCurrentSchedule(item.day, item.period);
+        const currentClass = isCurrent ? 'current-schedule' : '';
+
         return `
-        <tr class="${colorClass}">
+        <tr class="${colorClass} ${currentClass}">
             <td>${start + index + 1}</td>
             <td>${item.day}</td>
             <td>Jam ${item.period}</td>
@@ -17267,7 +17345,7 @@ function updatePagination() {
     document.getElementById('nextPage').disabled = currentPage === totalPages || totalPages === 0;
 }
 
-// Render grid view
+// Render grid view with current schedule highlight
 function renderGrid() {
     const gridContainer = document.getElementById('gridContainer');
 
@@ -17297,8 +17375,11 @@ function renderGrid() {
                         <div class="class-grid">
                             ${grouped[day][period].map(item => {
                                 const colorClass = getClassColor(item.class);
+                                const isCurrent = isCurrentSchedule(item.day, item.period);
+                                const currentClass = isCurrent ? 'current-schedule' : '';
+
                                 return `
-                                <div class="class-item ${colorClass}">
+                                <div class="class-item ${colorClass} ${currentClass}">
                                     <div class="class-name"><i class="fas fa-door-open"></i> ${item.class}</div>
                                     <div class="subject-name"><i class="fas fa-book"></i> ${item.subject}</div>
                                     <div class="teacher-name"><i class="fas fa-user"></i> ${item.teacher}</div>
@@ -17314,8 +17395,16 @@ function renderGrid() {
 }
 
 // Event listeners
-document.getElementById('daySelect').addEventListener('change', applyFilters);
-document.getElementById('periodSelect').addEventListener('change', applyFilters);
+document.getElementById('daySelect').addEventListener('change', () => {
+    autoFollowEnabled = false; // Disable auto-follow when user manually changes filter
+    applyFilters();
+});
+
+document.getElementById('periodSelect').addEventListener('change', () => {
+    autoFollowEnabled = false;
+    applyFilters();
+});
+
 document.getElementById('classSelect').addEventListener('change', applyFilters);
 document.getElementById('teacherSelect').addEventListener('change', applyFilters);
 
@@ -17324,7 +17413,8 @@ document.getElementById('resetBtn').addEventListener('click', () => {
     document.getElementById('periodSelect').value = '';
     document.getElementById('classSelect').value = '';
     document.getElementById('teacherSelect').value = '';
-    applyFilters();
+    autoFollowEnabled = true; // Re-enable auto-follow on reset
+    autoFollowCurrentTime();
 });
 
 document.getElementById('prevPage').addEventListener('click', () => {
@@ -17356,6 +17446,11 @@ document.querySelectorAll('.toggle-btn').forEach(btn => {
         } else {
             document.getElementById('gridView').classList.add('active');
         }
+
+        // Scroll to current after view change
+        setTimeout(() => {
+            scrollToCurrentSchedule();
+        }, 100);
     });
 });
 
