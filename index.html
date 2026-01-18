@@ -1,179 +1,164 @@
 <!DOCTYPE html>
 <html lang="id">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Monitoring Jadwal Pelajaran -  SMKN 1 Maja</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="container">
-            <header>
-                <h1>
-                    <!-- <i class="fas fa-chart-line"></i> -->
-                    Sistem Monitoring Jadwal Pelajaran
-                </h1>
-                <p class="subtitle">oleh Tim Kurikulum SMKN 1 Maja</p>
-                <div class="current-time" id="currentTime"></div>
-            </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Pelajaran SMKN 1 Maja</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <div class="header-left">
+                <div class="logo-container">
+                    <i class="fas fa-school"></i>
+                </div>
+                <div class="header-title">
+                    <h1>Sistem Monitoring Jadwal Pelajaran</h1>
+                    <div class="subtitle">
+                        Oleh Tim Kurikulum SMKN 1 Maja
+                        <div class="schedule-selector-container">
+                            <select id="scheduleTypeSelect">
+                                <option value="A">JADWAL A</option>
+                                <option value="B">JADWAL B</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right">
+                <div id="currentTime" class="current-time">Memuat waktu...</div>
+                <div id="currentPeriod" class="current-period-badge">-</div>
+            </div>
+        </header>
+
+        <!-- CONTROLS -->
+        <div class="controls-wrapper">
             <div class="controls">
                 <div class="control-group">
-                    <label for="daySelect">
-                        <i class="far fa-calendar-alt"></i>
-                        Pilih Hari:
-                    </label>
+                    <label><i class="far fa-calendar-alt"></i> Pilih Hari:</label>
                     <select id="daySelect">
                         <option value="">-- Semua Hari --</option>
-                        <option value="SENIN">Senin</option>
-                        <option value="SELASA">Selasa</option>
-                        <option value="RABU">Rabu</option>
-                        <option value="KAMIS">Kamis</option>
-                        <option value="JUM'AT">Jum'at</option>
+                        <option value="SENIN">SENIN</option>
+                        <option value="SELASA">SELASA</option>
+                        <option value="RABU">RABU</option>
+                        <option value="KAMIS">KAMIS</option>
+                        <option value="JUM'AT">JUM'AT</option>
                     </select>
                 </div>
                 <div class="control-group">
-                    <label for="periodSelect">
-                        <i class="far fa-clock"></i>
-                        Pilih Jam:
-                    </label>
+                    <label><i class="far fa-clock"></i> Pilih Jam:</label>
                     <select id="periodSelect">
                         <option value="">-- Semua Jam --</option>
                     </select>
                 </div>
                 <div class="control-group">
-                    <label for="classSelect">
-                        <i class="fas fa-door-open"></i>
-                        Pilih Kelas:
-                    </label>
+                    <label><i class="fas fa-door-open"></i> Pilih Kelas:</label>
                     <select id="classSelect">
                         <option value="">-- Semua Kelas --</option>
                     </select>
                 </div>
                 <div class="control-group">
-                    <label for="teacherSelect">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                        Pilih Guru:
-                    </label>
+                    <label><i class="fas fa-user-tie"></i> Pilih Guru:</label>
                     <select id="teacherSelect">
                         <option value="">-- Semua Guru --</option>
                     </select>
                 </div>
                 <button id="resetBtn" class="btn-reset">
-                    <i class="fas fa-redo-alt"></i>
-                    Reset Filter
+                    <i class="fas fa-sync-alt"></i> Reset Filter
                 </button>
             </div>
+        </div>
+
+        <!-- STATS -->
+        <div class="stats-wrapper">
             <div class="stats-container">
                 <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-calendar-check"></i>
-                    </div>
+                    <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
                     <div class="stat-content">
-                        <div class="stat-value" id="totalEntries">0</div>
+                        <div id="totalEntries" class="stat-value">0</div>
                         <div class="stat-label">Total Jadwal</div>
                     </div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
+                    <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
                     <div class="stat-content">
-                        <div class="stat-value" id="activeTeachers">0</div>
+                        <div id="activeTeachers" class="stat-value">0</div>
                         <div class="stat-label">Guru Aktif</div>
                     </div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-school"></i>
-                    </div>
+                    <div class="stat-icon"><i class="fas fa-school"></i></div>
                     <div class="stat-content">
-                        <div class="stat-value" id="activeClasses">0</div>
+                        <div id="activeClasses" class="stat-value">0</div>
                         <div class="stat-label">Kelas Aktif</div>
                     </div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
+                    <div class="stat-icon"><i class="fas fa-clock"></i></div>
                     <div class="stat-content">
-                        <div class="stat-value" id="currentPeriod">-</div>
+                        <div class="stat-value">Jam 8</div>
                         <div class="stat-label">Jam Sekarang</div>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- VIEW TOGGLE -->
+        <div class="view-toggle-wrapper">
             <div class="view-toggle">
                 <button class="toggle-btn active" data-view="table">
-                    <i class="fas fa-table"></i>
-                    Tampilan Tabel
+                    <i class="fas fa-table"></i> Tampilan Tabel
                 </button>
                 <button class="toggle-btn" data-view="grid">
-                    <i class="fas fa-th-large"></i>
-                    Tampilan Grid
+                    <i class="fas fa-th-large"></i> Tampilan Grid
                 </button>
             </div>
-            <div id="tableView" class="view-content active">
-                <div class="table-wrapper">
-                    <table id="scheduleTable">
-                        <thead>
-                            <tr>
-                                <th>
-                                    <i class="fas fa-hashtag"></i>
-                                    No
-                                </th>
-                                <th>
-                                    <i class="far fa-calendar"></i>
-                                    Hari
-                                </th>
-                                <th>
-                                    <i class="far fa-clock"></i>
-                                    Jam
-                                </th>
-                                <th>
-                                    <i class="fas fa-hourglass-half"></i>
-                                    Waktu
-                                </th>
-                                <th>
-                                    <i class="fas fa-door-open"></i>
-                                    Kelas
-                                </th>
-                                <th>
-                                    <i class="fas fa-book"></i>
-                                    Mata Pelajaran
-                                </th>
-                                <th>
-                                    <i class="fas fa-user"></i>
-                                    Guru
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody id="scheduleBody">
-                            <!-- Data akan diisi via JavaScript --></tbody>
-                    </table>
-                </div>
-                <div class="pagination">
-                    <button id="prevPage" class="btn-page">
-                        <i class="fas fa-chevron-left"></i>
-                        Sebelumnya
-                    </button>
-                    <span id="pageInfo">Halaman 1 dari 1</span>
-                    <button id="nextPage" class="btn-page">
-                        Selanjutnya
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-            <div id="gridView" class="view-content">
-                <div id="gridContainer" class="grid-container">
-                    <!-- Grid akan diisi via JavaScript --></div>
-            </div>
-            <footer>
-                <p>
-                    <i class="far fa-copyright"></i>
-                    2026 SMKN 1 Maja - Sistem Monitoring Jadwal Pelajaran - by Fikri A Fasha
-                </p>
-            </footer>
         </div>
-        <script src="script.js"></script>
-    </body>
+
+        <!-- TABLE VIEW -->
+        <div id="tableView" class="view-content active">
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th># No</th>
+                            <th><i class="far fa-calendar"></i> Hari</th>
+                            <th><i class="far fa-clock"></i> Jam</th>
+                            <th><i class="fas fa-hourglass-half"></i> Waktu</th>
+                            <th><i class="fas fa-door-open"></i> Kelas</th>
+                            <th><i class="fas fa-book"></i> Mata Pelajaran</th>
+                            <th><i class="fas fa-user"></i> Guru</th>
+                        </tr>
+                    </thead>
+                    <tbody id="scheduleBody">
+                        <!-- Data will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <button id="prevPage" class="btn-page"><i class="fas fa-chevron-left"></i> Sebelumnya</button>
+                <span id="pageInfo">Halaman 1 dari 1</span>
+                <button id="nextPage" class="btn-page">Selanjutnya <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+        <!-- GRID VIEW -->
+        <div id="gridView" class="view-content">
+            <div id="gridContainer" class="grid-container">
+                <!-- Grid items will be populated here -->
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Tim Kurikulum SMKN 1 Maja - Sistem Informasi Jadwal Pelajaran</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
