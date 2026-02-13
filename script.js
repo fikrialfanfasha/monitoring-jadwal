@@ -2207,7 +2207,7 @@ const SCHEDULE_A = {
       "endtime": "13:40",
       "class": "X TE 3",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SENIN",
@@ -2612,7 +2612,7 @@ const SCHEDULE_A = {
       "endtime": "14:20",
       "class": "X TE 3",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SENIN",
@@ -2963,7 +2963,7 @@ const SCHEDULE_A = {
       "endtime": "15:00",
       "class": "X TE 3",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SENIN",
@@ -3224,7 +3224,7 @@ const SCHEDULE_A = {
       "endtime": "15:40",
       "class": "X TE 3",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SENIN",
@@ -3638,7 +3638,7 @@ const SCHEDULE_A = {
       "endtime": "7:10",
       "class": "XI ATPH 2",
       "subject": "Kreatifitas Inovasi dan Kewirausahaan",
-      "teacher": "Suryaman, S.P., M.P."
+      "teacher": "Titin Nurhotimah, S.P."
     },
     {
       "day": "SELASA",
@@ -3665,7 +3665,7 @@ const SCHEDULE_A = {
       "endtime": "7:10",
       "class": "X AT 1",
       "subject": "Informatika",
-      "teacher": "Titin Nurhotimah, S.P."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -4025,7 +4025,7 @@ const SCHEDULE_A = {
       "endtime": "7:50",
       "class": "XI ATPH 2",
       "subject": "Kreatifitas Inovasi dan Kewirausahaan",
-      "teacher": "Suryaman, S.P., M.P."
+      "teacher": "Titin Nurhotimah, S.P."
     },
     {
       "day": "SELASA",
@@ -4052,7 +4052,7 @@ const SCHEDULE_A = {
       "endtime": "7:50",
       "class": "X AT 1",
       "subject": "Informatika",
-      "teacher": "Titin Nurhotimah, S.P."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -4403,7 +4403,7 @@ const SCHEDULE_A = {
       "endtime": "8:30",
       "class": "XI ATPH 2",
       "subject": "Kreatifitas Inovasi dan Kewirausahaan",
-      "teacher": "Suryaman, S.P., M.P."
+      "teacher": "Titin Nurhotimah, S.P."
     },
     {
       "day": "SELASA",
@@ -4430,7 +4430,7 @@ const SCHEDULE_A = {
       "endtime": "8:30",
       "class": "X AT 1",
       "subject": "Informatika",
-      "teacher": "Titin Nurhotimah, S.P."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -4691,7 +4691,7 @@ const SCHEDULE_A = {
       "endtime": "9:10",
       "class": "X TE 1",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -4790,7 +4790,7 @@ const SCHEDULE_A = {
       "endtime": "9:10",
       "class": "XI ATPH 2",
       "subject": "Kreatifitas Inovasi dan Kewirausahaan",
-      "teacher": "Suryaman, S.P., M.P."
+      "teacher": "Titin Nurhotimah, S.P."
     },
     {
       "day": "SELASA",
@@ -4808,7 +4808,7 @@ const SCHEDULE_A = {
       "endtime": "9:10",
       "class": "X AT 1",
       "subject": "Informatika",
-      "teacher": "Titin Nurhotimah, S.P."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -5060,7 +5060,7 @@ const SCHEDULE_A = {
       "endtime": "10:10",
       "class": "X TE 1",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -5186,7 +5186,7 @@ const SCHEDULE_A = {
       "endtime": "10:10",
       "class": "X AT 1",
       "subject": "Informatika",
-      "teacher": "Titin Nurhotimah, S.P."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -5456,7 +5456,7 @@ const SCHEDULE_A = {
       "endtime": "10:50",
       "class": "X TE 1",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -5528,7 +5528,7 @@ const SCHEDULE_A = {
       "endtime": "10:50",
       "class": "X AT 2",
       "subject": "Informatika",
-      "teacher": "Titin Nurhotimah, S.P."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -5843,7 +5843,7 @@ const SCHEDULE_A = {
       "endtime": "11:30",
       "class": "X TE 1",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -5915,7 +5915,7 @@ const SCHEDULE_A = {
       "endtime": "11:30",
       "class": "X AT 2",
       "subject": "Informatika",
-      "teacher": "Titin Nurhotimah, S.P."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -5951,7 +5951,7 @@ const SCHEDULE_A = {
       "endtime": "11:30",
       "class": "XI ATPH 1",
       "subject": "Kreatifitas Inovasi dan Kewirausahaan",
-      "teacher": "Suryaman, S.P., M.P."
+      "teacher": "Titin Nurhotimah, S.P."
     },
     {
       "day": "SELASA",
@@ -6239,7 +6239,7 @@ const SCHEDULE_A = {
       "endtime": "13:40",
       "class": "X TE 4",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -6302,7 +6302,7 @@ const SCHEDULE_A = {
       "endtime": "13:40",
       "class": "X AT 2",
       "subject": "Informatika",
-      "teacher": "Titin Nurhotimah, S.P."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -6329,7 +6329,7 @@ const SCHEDULE_A = {
       "endtime": "13:40",
       "class": "XI ATPH 1",
       "subject": "Kreatifitas Inovasi dan Kewirausahaan",
-      "teacher": "Suryaman, S.P., M.P."
+      "teacher": "Titin Nurhotimah, S.P."
     },
     {
       "day": "SELASA",
@@ -6626,7 +6626,7 @@ const SCHEDULE_A = {
       "endtime": "14:20",
       "class": "X TE 4",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -6680,7 +6680,7 @@ const SCHEDULE_A = {
       "endtime": "14:20",
       "class": "X AT 2",
       "subject": "Informatika",
-      "teacher": "Titin Nurhotimah, S.P."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -6707,7 +6707,7 @@ const SCHEDULE_A = {
       "endtime": "14:20",
       "class": "XI ATPH 1",
       "subject": "Kreatifitas Inovasi dan Kewirausahaan",
-      "teacher": "Suryaman, S.P., M.P."
+      "teacher": "Titin Nurhotimah, S.P."
     },
     {
       "day": "SELASA",
@@ -6941,7 +6941,7 @@ const SCHEDULE_A = {
       "endtime": "15:00",
       "class": "X TE 4",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -7031,7 +7031,7 @@ const SCHEDULE_A = {
       "endtime": "15:00",
       "class": "XI ATPH 1",
       "subject": "Kreatifitas Inovasi dan Kewirausahaan",
-      "teacher": "Suryaman, S.P., M.P."
+      "teacher": "Titin Nurhotimah, S.P."
     },
     {
       "day": "SELASA",
@@ -7184,7 +7184,7 @@ const SCHEDULE_A = {
       "endtime": "15:40",
       "class": "X TE 4",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -11459,7 +11459,7 @@ const SCHEDULE_A = {
       "endtime": "7:10",
       "class": "XI ATPH 2",
       "subject": "Kreatifitas Inovasi dan Kewirausahaan",
-      "teacher": "Suryaman, S.P., M.P."
+      "teacher": "Titin Nurhotimah, S.P."
     },
     {
       "day": "KAMIS",
@@ -11495,7 +11495,7 @@ const SCHEDULE_A = {
       "endtime": "7:10",
       "class": "X AT 1",
       "subject": "Informatika",
-      "teacher": "Titin Nurhotimah, S.P."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "KAMIS",
@@ -11846,7 +11846,7 @@ const SCHEDULE_A = {
       "endtime": "7:50",
       "class": "XI ATPH 2",
       "subject": "Kreatifitas Inovasi dan Kewirausahaan",
-      "teacher": "Suryaman, S.P., M.P."
+      "teacher": "Titin Nurhotimah, S.P."
     },
     {
       "day": "KAMIS",
@@ -11882,7 +11882,7 @@ const SCHEDULE_A = {
       "endtime": "7:50",
       "class": "X AT 1",
       "subject": "Informatika",
-      "teacher": "Titin Nurhotimah, S.P."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "KAMIS",
@@ -12242,7 +12242,7 @@ const SCHEDULE_A = {
       "endtime": "8:30",
       "class": "XI ATPH 2",
       "subject": "Kreatifitas Inovasi dan Kewirausahaan",
-      "teacher": "Suryaman, S.P., M.P."
+      "teacher": "Titin Nurhotimah, S.P."
     },
     {
       "day": "KAMIS",
@@ -12260,7 +12260,7 @@ const SCHEDULE_A = {
       "endtime": "8:30",
       "class": "X AT 1",
       "subject": "Informatika",
-      "teacher": "Titin Nurhotimah, S.P."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "KAMIS",
@@ -12638,7 +12638,7 @@ const SCHEDULE_A = {
       "endtime": "9:10",
       "class": "XI ATPH 2",
       "subject": "Kreatifitas Inovasi dan Kewirausahaan",
-      "teacher": "Suryaman, S.P., M.P."
+      "teacher": "Titin Nurhotimah, S.P."
     },
     {
       "day": "KAMIS",
@@ -13772,7 +13772,7 @@ const SCHEDULE_A = {
       "endtime": "11:30",
       "class": "XI ATPH 1",
       "subject": "Kreatifitas Inovasi dan Kewirausahaan",
-      "teacher": "Suryaman, S.P., M.P."
+      "teacher": "Titin Nurhotimah, S.P."
     },
     {
       "day": "KAMIS",
@@ -14159,7 +14159,7 @@ const SCHEDULE_A = {
       "endtime": "13:40",
       "class": "XI ATPH 1",
       "subject": "Kreatifitas Inovasi dan Kewirausahaan",
-      "teacher": "Suryaman, S.P., M.P."
+      "teacher": "Titin Nurhotimah, S.P."
     },
     {
       "day": "KAMIS",
@@ -14537,7 +14537,7 @@ const SCHEDULE_A = {
       "endtime": "14:20",
       "class": "XI ATPH 1",
       "subject": "Kreatifitas Inovasi dan Kewirausahaan",
-      "teacher": "Suryaman, S.P., M.P."
+      "teacher": "Titin Nurhotimah, S.P."
     },
     {
       "day": "KAMIS",
@@ -14843,7 +14843,7 @@ const SCHEDULE_A = {
       "endtime": "15:00",
       "class": "XI ATPH 1",
       "subject": "Kreatifitas Inovasi dan Kewirausahaan",
-      "teacher": "Suryaman, S.P., M.P."
+      "teacher": "Titin Nurhotimah, S.P."
     },
     {
       "day": "KAMIS",
@@ -15329,7 +15329,7 @@ const SCHEDULE_A = {
       "endtime": "7:50",
       "class": "X AT 2",
       "subject": "Informatika",
-      "teacher": "Titin Nurhotimah, S.P."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "JUM'AT",
@@ -15716,7 +15716,7 @@ const SCHEDULE_A = {
       "endtime": "8:30",
       "class": "X AT 2",
       "subject": "Informatika",
-      "teacher": "Titin Nurhotimah, S.P."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "JUM'AT",
@@ -16085,7 +16085,7 @@ const SCHEDULE_A = {
       "endtime": "9:10",
       "class": "X AT 2",
       "subject": "Informatika",
-      "teacher": "Titin Nurhotimah, S.P."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "JUM'AT",
@@ -16463,7 +16463,7 @@ const SCHEDULE_A = {
       "endtime": "10:10",
       "class": "X AT 2",
       "subject": "Informatika",
-      "teacher": "Titin Nurhotimah, S.P."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "JUM'AT",
@@ -19276,7 +19276,7 @@ const SCHEDULE_B = {
       "endtime": "13:40",
       "class": "X TE 3",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SENIN",
@@ -19672,7 +19672,7 @@ const SCHEDULE_B = {
       "endtime": "14:20",
       "class": "X TE 3",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SENIN",
@@ -20023,7 +20023,7 @@ const SCHEDULE_B = {
       "endtime": "15:00",
       "class": "X TE 3",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SENIN",
@@ -20284,7 +20284,7 @@ const SCHEDULE_B = {
       "endtime": "15:40",
       "class": "X TE 3",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SENIN",
@@ -20599,7 +20599,7 @@ const SCHEDULE_B = {
       "endtime": "7:10",
       "class": "X TE 1",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -20986,7 +20986,7 @@ const SCHEDULE_B = {
       "endtime": "7:50",
       "class": "X TE 1",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -21355,7 +21355,7 @@ const SCHEDULE_B = {
       "endtime": "8:30",
       "class": "X TE 1",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -21733,7 +21733,7 @@ const SCHEDULE_B = {
       "endtime": "9:10",
       "class": "X TE 1",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -23272,7 +23272,7 @@ const SCHEDULE_B = {
       "endtime": "13:40",
       "class": "X TE 4",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -23659,7 +23659,7 @@ const SCHEDULE_B = {
       "endtime": "14:20",
       "class": "X TE 4",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -23992,7 +23992,7 @@ const SCHEDULE_B = {
       "endtime": "15:00",
       "class": "X TE 4",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -24253,7 +24253,7 @@ const SCHEDULE_B = {
       "endtime": "15:40",
       "class": "X TE 4",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "SELASA",
@@ -25333,7 +25333,7 @@ const SCHEDULE_B = {
       "endtime": "8:30",
       "class": "X TE 2",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "RABU",
@@ -25702,7 +25702,7 @@ const SCHEDULE_B = {
       "endtime": "9:10",
       "class": "X TE 2",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "RABU",
@@ -26107,7 +26107,7 @@ const SCHEDULE_B = {
       "endtime": "10:10",
       "class": "X TE 2",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "RABU",
@@ -26476,7 +26476,7 @@ const SCHEDULE_B = {
       "endtime": "10:50",
       "class": "X TE 2",
       "subject": "Informatika",
-      "teacher": "Dzikry Imaduddin Shoimun, S.Pd."
+      "teacher": "Iip Irfan Nulhakim, S.Pd."
     },
     {
       "day": "RABU",
@@ -34232,247 +34232,247 @@ let lastCheckedDay = '';
 let lastCheckedPeriod = null;
 
 const dayMap = {
-    'Sunday': 'MINGGU',
-    'Monday': 'SENIN',
-    'Tuesday': 'SELASA',
-    'Wednesday': 'RABU',
-    'Thursday': 'KAMIS',
-    'Friday': "JUM'AT",
-    'Saturday': 'SABTU'
+  'Sunday': 'MINGGU',
+  'Monday': 'SENIN',
+  'Tuesday': 'SELASA',
+  'Wednesday': 'RABU',
+  'Thursday': 'KAMIS',
+  'Friday': "JUM'AT",
+  'Saturday': 'SABTU'
 };
 
 function switchSchedule(type) {
-    currentScheduleType = type;
-    const data = type === 'A' ? SCHEDULE_A : SCHEDULE_B;
+  currentScheduleType = type;
+  const data = type === 'A' ? SCHEDULE_A : SCHEDULE_B;
 
-    scheduleData = data.schedule;
-    periods = data.periods;
-    days = data.days;
+  scheduleData = data.schedule;
+  periods = data.periods;
+  days = data.days;
 
-    // Update UI Selector if changed from code
-    const selector = document.getElementById('scheduleTypeSelect');
-    if (selector && selector.value !== type) {
-        selector.value = type;
-    }
+  // Update UI Selector if changed from code
+  const selector = document.getElementById('scheduleTypeSelect');
+  if (selector && selector.value !== type) {
+    selector.value = type;
+  }
 
-    // Reset & Reload
-    currentPage = 1;
-    populateFilters(); 
-    applyFilters();
-    updateStats();
+  // Reset & Reload
+  currentPage = 1;
+  populateFilters();
+  applyFilters();
+  updateStats();
 
-    // Force re-check current time match
-    lastCheckedDay = ''; 
-    autoFollowCurrentTime();
+  // Force re-check current time match
+  lastCheckedDay = '';
+  autoFollowCurrentTime();
 }
 
 function getClassColor(className) {
-    let level = '';
-    let major = '';
+  let level = '';
+  let major = '';
 
-    if (className.match(/^X\s/)) level = 'grade-10';
-    else if (className.match(/^XI\s/)) level = 'grade-11';
-    else if (className.match(/^XII\s/)) level = 'grade-12';
+  if (className.match(/^X\s/)) level = 'grade-10';
+  else if (className.match(/^XI\s/)) level = 'grade-11';
+  else if (className.match(/^XII\s/)) level = 'grade-12';
 
-    const classUpper = className.toUpperCase();
-    if (classUpper.includes('TAV') || classUpper.match(/\sTE\s/)) major = 'major-tav';
-    else if (classUpper.includes('PPLG') || classUpper.includes('RPL')) major = 'major-pplg';
-    else if (classUpper.includes('TJKT') || classUpper.includes('TKJ')) major = 'major-tjkt';
-    else if (classUpper.includes('ATPH') || classUpper.match(/\sAT\s/)) major = 'major-atph';
+  const classUpper = className.toUpperCase();
+  if (classUpper.includes('TAV') || classUpper.match(/\sTE\s/)) major = 'major-tav';
+  else if (classUpper.includes('PPLG') || classUpper.includes('RPL')) major = 'major-pplg';
+  else if (classUpper.includes('TJKT') || classUpper.includes('TKJ')) major = 'major-tjkt';
+  else if (classUpper.includes('ATPH') || classUpper.match(/\sAT\s/)) major = 'major-atph';
 
-    return `${level} ${major}`.trim();
+  return `${level} ${major}`.trim();
 }
 
 function getCurrentDayAndPeriod() {
-    const now = new Date();
-    const dayName = now.toLocaleDateString('en-US', { weekday: 'long' });
-    const currentDay = dayMap[dayName] || '';
-    const currentTime = now.getHours() * 60 + now.getMinutes();
+  const now = new Date();
+  const dayName = now.toLocaleDateString('en-US', { weekday: 'long' });
+  const currentDay = dayMap[dayName] || '';
+  const currentTime = now.getHours() * 60 + now.getMinutes();
 
-    let currentPeriodNum = null;
-    for (const [periodNum, periodInfo] of Object.entries(periods)) {
-        const [startH, startM] = periodInfo.starttime.split(':').map(Number);
-        const [endH, endM] = periodInfo.endtime.split(':').map(Number);
-        const startTime = startH * 60 + startM;
-        const endTime = endH * 60 + endM;
-        if (currentTime >= startTime && currentTime <= endTime) {
-            currentPeriodNum = parseInt(periodNum);
-            break;
-        }
+  let currentPeriodNum = null;
+  for (const [periodNum, periodInfo] of Object.entries(periods)) {
+    const [startH, startM] = periodInfo.starttime.split(':').map(Number);
+    const [endH, endM] = periodInfo.endtime.split(':').map(Number);
+    const startTime = startH * 60 + startM;
+    const endTime = endH * 60 + endM;
+    if (currentTime >= startTime && currentTime <= endTime) {
+      currentPeriodNum = parseInt(periodNum);
+      break;
     }
-    return { day: currentDay, period: currentPeriodNum };
+  }
+  return { day: currentDay, period: currentPeriodNum };
 }
 
 function autoFollowCurrentTime() {
-    if (!autoFollowEnabled) return;
-    const { day, period } = getCurrentDayAndPeriod();
-    if (day && days.includes(day)) {
-        if (document.getElementById('daySelect').value !== day) {
-            document.getElementById('daySelect').value = day;
-        }
+  if (!autoFollowEnabled) return;
+  const { day, period } = getCurrentDayAndPeriod();
+  if (day && days.includes(day)) {
+    if (document.getElementById('daySelect').value !== day) {
+      document.getElementById('daySelect').value = day;
     }
-    if (period) {
-        const periodStr = period.toString();
-        // Check if period exists in current schedule
-        const periodOption = document.querySelector(`#periodSelect option[value="${periodStr}"]`);
-        if (periodOption && document.getElementById('periodSelect').value !== periodStr) {
-            document.getElementById('periodSelect').value = periodStr;
-        }
+  }
+  if (period) {
+    const periodStr = period.toString();
+    // Check if period exists in current schedule
+    const periodOption = document.querySelector(`#periodSelect option[value="${periodStr}"]`);
+    if (periodOption && document.getElementById('periodSelect').value !== periodStr) {
+      document.getElementById('periodSelect').value = periodStr;
     }
-    applyFilters();
-    setTimeout(() => scrollToCurrentSchedule(), 100);
+  }
+  applyFilters();
+  setTimeout(() => scrollToCurrentSchedule(), 100);
 }
 
 function checkAndUpdateIfChanged() {
-    if (!autoFollowEnabled) return;
-    const { day, period } = getCurrentDayAndPeriod();
-    if (day !== lastCheckedDay || period !== lastCheckedPeriod) {
-        lastCheckedDay = day;
-        lastCheckedPeriod = period;
-        autoFollowCurrentTime();
-    }
+  if (!autoFollowEnabled) return;
+  const { day, period } = getCurrentDayAndPeriod();
+  if (day !== lastCheckedDay || period !== lastCheckedPeriod) {
+    lastCheckedDay = day;
+    lastCheckedPeriod = period;
+    autoFollowCurrentTime();
+  }
 }
 
 function scrollToCurrentSchedule() {
-    const currentRow = document.querySelector('tbody tr.current-schedule');
-    const currentCard = document.querySelector('.class-item.current-schedule');
-    if (currentRow) currentRow.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    else if (currentCard) currentCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  const currentRow = document.querySelector('tbody tr.current-schedule');
+  const currentCard = document.querySelector('.class-item.current-schedule');
+  if (currentRow) currentRow.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  else if (currentCard) currentCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
 function isCurrentSchedule(scheduleDay, schedulePeriod) {
-    const { day, period } = getCurrentDayAndPeriod();
-    return scheduleDay === day && schedulePeriod === period;
+  const { day, period } = getCurrentDayAndPeriod();
+  return scheduleDay === day && schedulePeriod === period;
 }
 
 function loadData() {
-    try {
-        // Manual select logic
-        const selector = document.getElementById('scheduleTypeSelect');
-        const initialType = selector ? selector.value : 'A';
-        switchSchedule(initialType);
+  try {
+    // Manual select logic
+    const selector = document.getElementById('scheduleTypeSelect');
+    const initialType = selector ? selector.value : 'A';
+    switchSchedule(initialType);
 
-        // Initialize state
-        const { day, period } = getCurrentDayAndPeriod();
-        lastCheckedDay = day;
-        lastCheckedPeriod = period;
+    // Initialize state
+    const { day, period } = getCurrentDayAndPeriod();
+    lastCheckedDay = day;
+    lastCheckedPeriod = period;
 
-        autoFollowCurrentTime();
-        updateCurrentTime();
+    autoFollowCurrentTime();
+    updateCurrentTime();
 
-        setInterval(updateCurrentTime, 1000);
-        setInterval(checkAndUpdateIfChanged, 10000);
+    setInterval(updateCurrentTime, 1000);
+    setInterval(checkAndUpdateIfChanged, 10000);
 
-    } catch (error) {
-        console.error('Error loading data:', error);
-    }
+  } catch (error) {
+    console.error('Error loading data:', error);
+  }
 }
 
 function updateCurrentTime() {
-    const now = new Date();
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
-    document.getElementById('currentTime').textContent = now.toLocaleDateString('id-ID', options);
-    updateCurrentPeriodBadge(now);
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+  document.getElementById('currentTime').textContent = now.toLocaleDateString('id-ID', options);
+  updateCurrentPeriodBadge(now);
 }
 
 function updateCurrentPeriodBadge(now) {
-    const currentTime = now.getHours() * 60 + now.getMinutes();
-    let currentPeriod = '-';
-    for (const [periodNum, periodInfo] of Object.entries(periods)) {
-        const [startH, startM] = periodInfo.starttime.split(':').map(Number);
-        const [endH, endM] = periodInfo.endtime.split(':').map(Number);
-        const startTime = startH * 60 + startM;
-        const endTime = endH * 60 + endM;
-        if (currentTime >= startTime && currentTime <= endTime) {
-            currentPeriod = `Jam ${periodNum}`;
-            break;
-        }
+  const currentTime = now.getHours() * 60 + now.getMinutes();
+  let currentPeriod = '-';
+  for (const [periodNum, periodInfo] of Object.entries(periods)) {
+    const [startH, startM] = periodInfo.starttime.split(':').map(Number);
+    const [endH, endM] = periodInfo.endtime.split(':').map(Number);
+    const startTime = startH * 60 + startM;
+    const endTime = endH * 60 + endM;
+    if (currentTime >= startTime && currentTime <= endTime) {
+      currentPeriod = `Jam ${periodNum}`;
+      break;
     }
-    const badge = document.getElementById('currentPeriod');
-    if (badge) badge.textContent = currentPeriod;
+  }
+  const badge = document.getElementById('currentPeriod');
+  if (badge) badge.textContent = currentPeriod;
 }
 
 function populateFilters() {
-    const periodSelect = document.getElementById('periodSelect');
-    const currentPeriodVal = periodSelect.value;
-    periodSelect.innerHTML = '<option value="">-- Semua Jam --</option>';
+  const periodSelect = document.getElementById('periodSelect');
+  const currentPeriodVal = periodSelect.value;
+  periodSelect.innerHTML = '<option value="">-- Semua Jam --</option>';
 
-    Object.keys(periods).sort((a, b) => parseInt(a) - parseInt(b)).forEach(periodNum => {
-        const option = document.createElement('option');
-        option.value = periodNum;
-        option.textContent = `Jam ${periodNum} (${periods[periodNum].starttime} - ${periods[periodNum].endtime})`;
-        periodSelect.appendChild(option);
-    });
-    if(periods[currentPeriodVal]) periodSelect.value = currentPeriodVal;
+  Object.keys(periods).sort((a, b) => parseInt(a) - parseInt(b)).forEach(periodNum => {
+    const option = document.createElement('option');
+    option.value = periodNum;
+    option.textContent = `Jam ${periodNum} (${periods[periodNum].starttime} - ${periods[periodNum].endtime})`;
+    periodSelect.appendChild(option);
+  });
+  if (periods[currentPeriodVal]) periodSelect.value = currentPeriodVal;
 
-    const classSelect = document.getElementById('classSelect');
-    const currentClassVal = classSelect.value;
-    classSelect.innerHTML = '<option value="">-- Semua Kelas --</option>';
-    const classes = [...new Set(scheduleData.map(s => s.class))].sort();
-    classes.forEach(className => {
-        const option = document.createElement('option');
-        option.value = className;
-        option.textContent = className;
-        classSelect.appendChild(option);
-    });
-    if(classes.includes(currentClassVal)) classSelect.value = currentClassVal;
+  const classSelect = document.getElementById('classSelect');
+  const currentClassVal = classSelect.value;
+  classSelect.innerHTML = '<option value="">-- Semua Kelas --</option>';
+  const classes = [...new Set(scheduleData.map(s => s.class))].sort();
+  classes.forEach(className => {
+    const option = document.createElement('option');
+    option.value = className;
+    option.textContent = className;
+    classSelect.appendChild(option);
+  });
+  if (classes.includes(currentClassVal)) classSelect.value = currentClassVal;
 
-    const teacherSelect = document.getElementById('teacherSelect');
-    const currentTeacherVal = teacherSelect.value;
-    teacherSelect.innerHTML = '<option value="">-- Semua Guru --</option>';
-    const teachers = [...new Set(scheduleData.map(s => s.teacher))].sort();
-    teachers.forEach(teacherName => {
-        const option = document.createElement('option');
-        option.value = teacherName;
-        option.textContent = teacherName;
-        teacherSelect.appendChild(option);
-    });
-    if(teachers.includes(currentTeacherVal)) teacherSelect.value = currentTeacherVal;
+  const teacherSelect = document.getElementById('teacherSelect');
+  const currentTeacherVal = teacherSelect.value;
+  teacherSelect.innerHTML = '<option value="">-- Semua Guru --</option>';
+  const teachers = [...new Set(scheduleData.map(s => s.teacher))].sort();
+  teachers.forEach(teacherName => {
+    const option = document.createElement('option');
+    option.value = teacherName;
+    option.textContent = teacherName;
+    teacherSelect.appendChild(option);
+  });
+  if (teachers.includes(currentTeacherVal)) teacherSelect.value = currentTeacherVal;
 }
 
 function applyFilters() {
-    const day = document.getElementById('daySelect').value;
-    const period = document.getElementById('periodSelect').value;
-    const className = document.getElementById('classSelect').value;
-    const teacher = document.getElementById('teacherSelect').value;
+  const day = document.getElementById('daySelect').value;
+  const period = document.getElementById('periodSelect').value;
+  const className = document.getElementById('classSelect').value;
+  const teacher = document.getElementById('teacherSelect').value;
 
-    filteredData = scheduleData.filter(item => {
-        return (!day || item.day === day) &&
-               (!period || item.period === parseInt(period)) &&
-               (!className || item.class === className) &&
-               (!teacher || item.teacher === teacher);
-    });
+  filteredData = scheduleData.filter(item => {
+    return (!day || item.day === day) &&
+      (!period || item.period === parseInt(period)) &&
+      (!className || item.class === className) &&
+      (!teacher || item.teacher === teacher);
+  });
 
-    currentPage = 1;
-    updateStats();
-    renderTable();
-    renderGrid();
+  currentPage = 1;
+  updateStats();
+  renderTable();
+  renderGrid();
 }
 
 function updateStats() {
-    document.getElementById('totalEntries').textContent = filteredData.length;
-    const uniqueTeachers = new Set(filteredData.map(s => s.teacher));
-    document.getElementById('activeTeachers').textContent = uniqueTeachers.size;
-    const uniqueClasses = new Set(filteredData.map(s => s.class));
-    document.getElementById('activeClasses').textContent = uniqueClasses.size;
+  document.getElementById('totalEntries').textContent = filteredData.length;
+  const uniqueTeachers = new Set(filteredData.map(s => s.teacher));
+  document.getElementById('activeTeachers').textContent = uniqueTeachers.size;
+  const uniqueClasses = new Set(filteredData.map(s => s.class));
+  document.getElementById('activeClasses').textContent = uniqueClasses.size;
 }
 
 function renderTable() {
-    const tbody = document.getElementById('scheduleBody');
-    const start = (currentPage - 1) * itemsPerPage;
-    const end = start + itemsPerPage;
-    const pageData = filteredData.slice(start, end);
+  const tbody = document.getElementById('scheduleBody');
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const pageData = filteredData.slice(start, end);
 
-    if (pageData.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="7" class="no-data">Tidak ada data yang sesuai dengan filter</td></tr>';
-        return;
-    }
+  if (pageData.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="7" class="no-data">Tidak ada data yang sesuai dengan filter</td></tr>';
+    return;
+  }
 
-    tbody.innerHTML = pageData.map((item, index) => {
-        const colorClass = getClassColor(item.class);
-        const isCurrent = isCurrentSchedule(item.day, item.period);
-        const currentClass = isCurrent ? 'current-schedule' : '';
-        return `
+  tbody.innerHTML = pageData.map((item, index) => {
+    const colorClass = getClassColor(item.class);
+    const isCurrent = isCurrentSchedule(item.day, item.period);
+    const currentClass = isCurrent ? 'current-schedule' : '';
+    return `
         <tr class="${colorClass} ${currentClass}">
             <td>${start + index + 1}</td>
             <td>${item.day}</td>
@@ -34482,31 +34482,31 @@ function renderTable() {
             <td>${item.subject}</td>
             <td>${item.teacher}</td>
         </tr>`;
-    }).join('');
-    updatePagination();
+  }).join('');
+  updatePagination();
 }
 
 function updatePagination() {
-    const totalPages = Math.ceil(filteredData.length / itemsPerPage);
-    document.getElementById('pageInfo').textContent = `Halaman ${currentPage} dari ${totalPages}`;
-    document.getElementById('prevPage').disabled = currentPage === 1;
-    document.getElementById('nextPage').disabled = currentPage === totalPages || totalPages === 0;
+  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+  document.getElementById('pageInfo').textContent = `Halaman ${currentPage} dari ${totalPages}`;
+  document.getElementById('prevPage').disabled = currentPage === 1;
+  document.getElementById('nextPage').disabled = currentPage === totalPages || totalPages === 0;
 }
 
 function renderGrid() {
-    const gridContainer = document.getElementById('gridContainer');
-    if (filteredData.length === 0) {
-        gridContainer.innerHTML = '<div class="no-data">Tidak ada data yang sesuai dengan filter</div>';
-        return;
-    }
-    const grouped = {};
-    filteredData.forEach(item => {
-        if (!grouped[item.day]) grouped[item.day] = {};
-        if (!grouped[item.day][item.period]) grouped[item.day][item.period] = [];
-        grouped[item.day][item.period].push(item);
-    });
+  const gridContainer = document.getElementById('gridContainer');
+  if (filteredData.length === 0) {
+    gridContainer.innerHTML = '<div class="no-data">Tidak ada data yang sesuai dengan filter</div>';
+    return;
+  }
+  const grouped = {};
+  filteredData.forEach(item => {
+    if (!grouped[item.day]) grouped[item.day] = {};
+    if (!grouped[item.day][item.period]) grouped[item.day][item.period] = [];
+    grouped[item.day][item.period].push(item);
+  });
 
-    gridContainer.innerHTML = days.filter(day => grouped[day]).map(day => `
+  gridContainer.innerHTML = days.filter(day => grouped[day]).map(day => `
         <div class="day-section">
             <div class="day-header"><i class="far fa-calendar-alt"></i> ${day}</div>
             <div class="period-grid">
@@ -34518,16 +34518,16 @@ function renderGrid() {
                         </div>
                         <div class="class-grid">
                             ${grouped[day][period].map(item => {
-                                const colorClass = getClassColor(item.class);
-                                const isCurrent = isCurrentSchedule(item.day, item.period);
-                                const currentClass = isCurrent ? 'current-schedule' : '';
-                                return `
+    const colorClass = getClassColor(item.class);
+    const isCurrent = isCurrentSchedule(item.day, item.period);
+    const currentClass = isCurrent ? 'current-schedule' : '';
+    return `
                                 <div class="class-item ${colorClass} ${currentClass}">
                                     <div class="class-name"><i class="fas fa-door-open"></i> ${item.class}</div>
                                     <div class="subject-name"><i class="fas fa-book"></i> ${item.subject}</div>
                                     <div class="teacher-name"><i class="fas fa-user"></i> ${item.teacher}</div>
                                 </div>`;
-                            }).join('')}
+  }).join('')}
                         </div>
                     </div>`).join('')}
             </div>
@@ -34540,39 +34540,39 @@ document.getElementById('classSelect').addEventListener('change', applyFilters);
 document.getElementById('teacherSelect').addEventListener('change', applyFilters);
 
 const scheduleSelect = document.getElementById('scheduleTypeSelect');
-if(scheduleSelect) {
-    scheduleSelect.addEventListener('change', (e) => {
-        switchSchedule(e.target.value);
-    });
+if (scheduleSelect) {
+  scheduleSelect.addEventListener('change', (e) => {
+    switchSchedule(e.target.value);
+  });
 }
 
 document.getElementById('resetBtn').addEventListener('click', () => {
-    document.getElementById('daySelect').value = '';
-    document.getElementById('periodSelect').value = '';
-    document.getElementById('classSelect').value = '';
-    document.getElementById('teacherSelect').value = '';
-    autoFollowEnabled = true;
-    lastCheckedDay = '';
-    lastCheckedPeriod = null;
-    autoFollowCurrentTime();
+  document.getElementById('daySelect').value = '';
+  document.getElementById('periodSelect').value = '';
+  document.getElementById('classSelect').value = '';
+  document.getElementById('teacherSelect').value = '';
+  autoFollowEnabled = true;
+  lastCheckedDay = '';
+  lastCheckedPeriod = null;
+  autoFollowCurrentTime();
 });
 
 document.getElementById('prevPage').addEventListener('click', () => { if (currentPage > 1) { currentPage--; renderTable(); } });
-document.getElementById('nextPage').addEventListener('click', () => { 
-    const totalPages = Math.ceil(filteredData.length / itemsPerPage);
-    if (currentPage < totalPages) { currentPage++; renderTable(); }
+document.getElementById('nextPage').addEventListener('click', () => {
+  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+  if (currentPage < totalPages) { currentPage++; renderTable(); }
 });
 
 document.querySelectorAll('.toggle-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const view = btn.dataset.view;
-        document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        document.querySelectorAll('.view-content').forEach(v => v.classList.remove('active'));
-        if (view === 'table') document.getElementById('tableView').classList.add('active');
-        else document.getElementById('gridView').classList.add('active');
-        setTimeout(() => scrollToCurrentSchedule(), 100);
-    });
+  btn.addEventListener('click', () => {
+    const view = btn.dataset.view;
+    document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.view-content').forEach(v => v.classList.remove('active'));
+    if (view === 'table') document.getElementById('tableView').classList.add('active');
+    else document.getElementById('gridView').classList.add('active');
+    setTimeout(() => scrollToCurrentSchedule(), 100);
+  });
 });
 
 loadData();

@@ -7,7 +7,7 @@
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
     background: #0f172a;
-    background-image: 
+    background-image:
         radial-gradient(at 47% 33%, hsl(210, 70%, 15%) 0, transparent 59%),
         radial-gradient(at 82% 65%, hsl(218, 70%, 12%) 0, transparent 55%);
     min-height: 100vh;
@@ -313,7 +313,7 @@ select:focus {
     overflow-x: auto;
     border-radius: 12px;
     background: white;
-    box-shadow: 
+    box-shadow:
         0 0 0 1px rgba(0, 0, 0, 0.05),
         0 2px 8px rgba(0, 0, 0, 0.05),
         0 12px 24px rgba(0, 0, 0, 0.05);
@@ -489,7 +489,7 @@ tbody tr.major-atph {
 tbody tr.current-schedule {
     background: linear-gradient(90deg, #fef3c7 0%, #fef9c3 50%, #ffffff 100%) !important;
     border-left: 5px solid #f59e0b !important;
-    box-shadow: 
+    box-shadow:
         inset 0 1px 0 rgba(245, 158, 11, 0.1),
         inset 0 -1px 0 rgba(245, 158, 11, 0.1) !important;
 }
@@ -578,7 +578,7 @@ tbody tr.current-schedule td:nth-child(3)::after {
     background: white;
     border-radius: 12px;
     padding: 28px;
-    box-shadow: 
+    box-shadow:
         0 0 0 1px rgba(0, 0, 0, 0.05),
         0 2px 8px rgba(0, 0, 0, 0.05),
         0 12px 24px rgba(0, 0, 0, 0.05);
@@ -984,7 +984,7 @@ footer i {
         border-radius: 12px;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
 
     table {
@@ -1198,7 +1198,8 @@ footer i {
 }
 
 #scheduleTypeSelect option {
-    background: #1e3a8a; /* Dark blue background for dropdown items */
+    background: #1e3a8a;
+    /* Dark blue background for dropdown items */
     color: white;
     padding: 10px;
 }
