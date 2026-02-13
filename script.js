@@ -34370,24 +34370,34 @@ function loadData() {
 
 function updateCurrentTime() {
   const now = new Date();
-  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
-  document.getElementById('currentTime').textContent = now.toLocaleDateString('id-ID', options);
+  const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+  const dateStr = now.toLocaleDateString('id-ID', dateOptions);
+  const timeStr = now.toLocaleTimeString('id-ID', timeOptions);
+  document.getElementById('currentTime').textContent = `${dateStr}, ${timeStr}`;
   updateCurrentPeriodBadge(now);
 }
+
 
 function updateCurrentPeriodBadge(now) {
   const currentTime = now.getHours() * 60 + now.getMinutes();
   let currentPeriod = '-';
-  for (const [periodNum, periodInfo] of Object.entries(periods)) {
+
+  // Sort periods by number to ensure correct order
+  const sortedPeriods = Object.entries(periods).sort((a, b) => parseInt(a[0]) - parseInt(b[0]));
+
+  for (const [periodNum, periodInfo] of sortedPeriods) {
     const [startH, startM] = periodInfo.starttime.split(':').map(Number);
     const [endH, endM] = periodInfo.endtime.split(':').map(Number);
     const startTime = startH * 60 + startM;
     const endTime = endH * 60 + endM;
-    if (currentTime >= startTime && currentTime <= endTime) {
+
+    if (currentTime >= startTime && currentTime < endTime) {  // Changed <= to <
       currentPeriod = `Jam ${periodNum}`;
       break;
     }
   }
+
   const badge = document.getElementById('currentPeriod');
   if (badge) badge.textContent = currentPeriod;
 }
